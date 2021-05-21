@@ -1,3 +1,4 @@
+// getTodo
 export const todoReducer = (state = [], action) => {
    // Generalmente se trabaja con switch
    switch (action.type) {
