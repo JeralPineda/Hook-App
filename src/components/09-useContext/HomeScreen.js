@@ -4,7 +4,7 @@ import { UserContext } from './UserContext';
 export const HomeScreen = () => {
    // Si yo quiero la informacion del usuario qu viene desde el context MainApp
    const { user } = useContext(UserContext);
-   console.log(user);
+   //    console.log(user);
 
    return (
       <div>
