@@ -10,8 +10,8 @@ export const MultipleCustomHooks = () => {
    const { loading, data } = useFetch(`https://breakingbadapi.com/api/quotes/${counter}`);
 
    //    Para la fecha en el footer
-   const year = new Date();
-   const insert = year.getFullYear();
+   //    const year = new Date();
+   //    const insert = year.getFullYear();
 
    const { author, quote } = !!data && data[0]; //Si existe la data se muestra
    // !null = true
@@ -31,7 +31,8 @@ export const MultipleCustomHooks = () => {
                <p className='mb-0'>{quote}</p>
 
                <footer className='blockquote-footer'>
-                  &copy;{author} {insert}
+                  {/* &copy;{author} {insert} */}
+                  {author}
                </footer>
             </blockquote>
          )}

@@ -20,7 +20,7 @@ export const useFetch = (url) => {
 
    useEffect(() => {
       //    Para que cargue el loading en cada petición
-      setState({ data: null, loading: true, error: false });
+      setState({ data: null, loading: true, error: null });
 
       fetch(url)
          .then((resp) => resp.json())
@@ -32,6 +32,13 @@ export const useFetch = (url) => {
                   data,
                });
             }
+         })
+         .catch(() => {
+            setState({
+               data: null,
+               loading: false,
+               error: 'No se pudo cargar la info',
+            });
          });
    }, [url]);
 
